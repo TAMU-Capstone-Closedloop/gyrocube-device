@@ -84,15 +84,6 @@ void Digital::set(Digital::OutputPin pin, bool isSet)
         case Digital::OutputPin::C4:
             DigitalOutPinC4::set(isSet);
             break;
-        case Digital::OutputPin::B13:
-            DigitalOutPinB13::set(isSet);
-            break;
-        case Digital::OutputPin::B14:
-            DigitalOutPinB14::set(isSet);
-            break;
-        case Digital::OutputPin::B15:
-            DigitalOutPinB15::set(isSet);
-            break;
         case Digital::OutputPin::Laser:
             DigitalOutPinLaser::set(isSet);
             break;

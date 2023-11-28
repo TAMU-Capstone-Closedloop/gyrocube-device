@@ -24,7 +24,6 @@
 
 #include "informants/kinematic_informant.hpp"
 // #include "informants/ultrasonic_distance_sensor.hpp"
-#include "informants/turret-comms/turret_can_communicator.hpp"
 #include "utils/nxp_imu/magnetometer/ist8310.hpp"
 #include "utils/robot_specific_inc.hpp"
 
@@ -35,18 +34,12 @@ class Drivers : public tap::Drivers {
 #ifdef ENV_UNIT_TESTS
 public:
 #endif
-    Drivers()
-        : tap::Drivers(),
-          controlOperatorInterface(this),
-          magnetometer(),
-          kinematicInformant(this),
-          turretCommunicator(this, CANBus::CAN_BUS1) {}
+    Drivers() : tap::Drivers(), controlOperatorInterface(this), magnetometer(), kinematicInformant(this) {}
 
 public:
     Control::OperatorInterface controlOperatorInterface;
     utils::Ist8310 magnetometer;
     Informants::KinematicInformant kinematicInformant;
-    Informants::TurretComms::TurretCommunicator turretCommunicator;
 };  // class Drivers
 
 }  // namespace src

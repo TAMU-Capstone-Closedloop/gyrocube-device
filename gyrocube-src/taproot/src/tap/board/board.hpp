@@ -157,12 +157,9 @@ using DigitalInPins = SoftwareGpioPort<DigitalInPinPF1, DigitalInPinPF0, Digital
         
 using DigitalOutPinC2 = GpioE11;
 using DigitalOutPinC4 = GpioE14;
-using DigitalOutPinB13 = GpioB13;
-using DigitalOutPinB14 = GpioB14;
-using DigitalOutPinB15 = GpioB15;
 using DigitalOutPinLaser = GpioC8;
         
-using DigitalOutPins = SoftwareGpioPort<DigitalOutPinC2, DigitalOutPinC4, DigitalOutPinB13, DigitalOutPinB14, DigitalOutPinB15, DigitalOutPinLaser>;
+using DigitalOutPins = SoftwareGpioPort<DigitalOutPinC2, DigitalOutPinC4, DigitalOutPinLaser>;
 
 // gpio pins used for SPI communication to the onboard BMI088 IMU
 
@@ -175,6 +172,11 @@ using ImuInt1Accel = GpioC4;
 using ImuInt1Gyro = GpioC5;
 using ImuHeater = GpioF6;
 using ImuSpiMaster = SpiMaster1;
+
+using AirliftSck = GpioB13;
+using AirliftMiso = GpioB14;
+using AirliftMosi = GpioB15;
+using AirliftSpiMaster = SpiMaster2;
 
 #endif
 

@@ -26,7 +26,7 @@
     <option name="taproot:communication:serial:terminal_serial:uart_port">Uart1</option>
     <option name="taproot:communication:serial:ref_serial:uart_port">Uart6</option>
     <option name="taproot:board:digital_in_pins">PF1,PF0,B12,C6,C7</option>
-    <option name="taproot:board:digital_out_pins">C2, C4, B13, B14, B15, Laser</option>
+    <option name="taproot:board:digital_out_pins">C2, C4, Laser</option>
     <!-- SPI_CS - PB12 -->
     <!-- SPI_CLK - PB13 -->
     <!-- SPI_MISO - PB14 -->

@@ -104,10 +104,9 @@ int main() {
             PROFILE(drivers->profiler, drivers->djiMotorTxHandler.encodeAndSendCanData, ());
             // PROFILE(drivers->profiler, drivers->terminalSerial.update, ()); // don't turn this on, it slows down UART
             // comms
-#ifndef TARGET_TURRET
             drivers->kinematicInformant.updateRobotFrames();
             utils::Music::playPacMan(drivers);
-#endif
+
             loopTimeDisplay = tap::arch::clock::getTimeMicroseconds() - loopStartTime;
         }
         modm::delay_us(10);
@@ -145,17 +144,9 @@ static void updateIo(src::Drivers *drivers) {
     tap::motorsim::SimHandler::updateSims();
 #endif
 
-#ifndef TARGET_TURRET
     drivers->canRxHandler.pollCanData();  // should probably also be updating for turret imu??
     drivers->refSerial.updateSerial();
     drivers->remote.read();
-#else
-    drivers->turretCommunicator.sendIMUData();
-#endif
-
-#ifdef TURRET_HAS_IMU
-    drivers->turretCommunicator.sendTurretRequest();
-#endif
 
     // utils::Music::continuePlayingXPStartupTune(drivers);
 
