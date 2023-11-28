@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'aimbots-src'
-copyright = '2020, aimbots-src'
-author = 'aimbots-src'
+project = 'gyrocube-src'
+copyright = '2020, gyrocube-src'
+author = 'gyrocube-src'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
@@ -55,7 +55,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 
-breathe_default_project = "aimbots-src"
+breathe_default_project = "gyrocube-src"
 
 extensions = [
     # there may be others here already, e.g. 'sphinx.ext.mathjax'
@@ -65,7 +65,7 @@ extensions = [
 
 # Setup the breathe extension
 breathe_projects = {
-    "aimbots-src": "./doxyoutput/xml"
+    "gyrocube-src": "./doxyoutput/xml"
 }
 
 # Setup the exhale extension

@@ -6,7 +6,7 @@
       "type": "cppdbg",
       "request": "launch",
       "preLaunchTask": "Build Tests - Debug",
-      "program": "${workspaceFolder}/aimbots-src/build/tests/scons-debug/aimbots-src-tests.elf",
+      "program": "${workspaceFolder}/gyrocube-src/build/tests/scons-debug/gyrocube-src-tests.elf",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -26,7 +26,7 @@
       "type": "cppdbg",
       "request": "launch",
       "preLaunchTask": "Build Sim - Debug",
-      "program": "${workspaceFolder}/aimbots-src/build/sim/scons-debug/aimbots-src.elf",
+      "program": "${workspaceFolder}/gyrocube-src/build/sim/scons-debug/gyrocube-src.elf",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -48,10 +48,10 @@
       "servertype": "openocd",
       "cwd": "${workspaceRoot}",
       "preLaunchTask": "Program - Debug",
-      "executable": "./aimbots-src/build/hardware/scons-debug/aimbots-src.elf",
+      "executable": "./gyrocube-src/build/hardware/scons-debug/gyrocube-src.elf",
       "device": "STM32F427II",
       "configFiles": [
-        "./aimbots-src/openocd.cfg"
+        "./gyrocube-src/openocd.cfg"
       ]
     },
     {
@@ -61,8 +61,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Projects/Robomaster/Embedded/Code/aimbots-dev/aimbots-src",
-      "program": "c:/Projects/Robomaster/Embedded/Code/aimbots-dev/aimbots-src/build/Debug/outDebug",
+      "cwd": "c:/Projects/Robomaster/Embedded/Code/aimbots-dev/gyrocube-src",
+      "program": "c:/Projects/Robomaster/Embedded/Code/aimbots-dev/gyrocube-src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -117,13 +117,13 @@
   },
   "C_Cpp.errorSquiggles": "EnabledIfIncludesResolve",
   "C_Cpp.default.includePath": [
-    "aimbots-src/taproot/src",
-    "aimbots-src/src"
+    "gyrocube-src/taproot/src",
+    "gyrocube-src/src"
   ],
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.cStandard": "c11",
   "C_Cpp.default.forcedInclude": [
-    "aimbots-src/robot-type/robot_type.hpp"
+    "gyrocube-src/robot-type/robot_type.hpp"
   ],
   "[markdown]": {
     "editor.wordWrap": "off",
@@ -242,13 +242,13 @@
     },
     "C_Cpp.errorSquiggles": "EnabledIfIncludesResolve",
     "C_Cpp.default.includePath": [
-        "aimbots-src/taproot/src",
-        "aimbots-src/src",
+        "gyrocube-src/taproot/src",
+        "gyrocube-src/src",
     ],
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.cStandard": "c11",
     "C_Cpp.default.forcedInclude": [
-        "aimbots-src/robot-type/robot_type.hpp"
+        "gyrocube-src/robot-type/robot_type.hpp"
     ],
     "[markdown]": {
         "editor.wordWrap": "off",
@@ -262,7 +262,7 @@
         ]
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
-}
+},
 
 
   "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat",

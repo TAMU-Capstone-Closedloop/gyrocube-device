@@ -3,8 +3,8 @@
 # 
 *.pyc
 
-aimbots-src/build
-aimbots-src/Pipfile.lock
+gyrocube-src/build
+gyrocube-src/Pipfile.lock
 project.xml.log
 
 .vscode/.cortex-debug.peripherals.state.json

@@ -2,26 +2,26 @@
 #
 # Copyright (c) 2020 Advanced Robotics at the University of Washington <robomstr@uw.edu>
 #
-# This file is part of aimbots-src.
+# This file is part of gyrocube-src.
 #
-# aimbots-src is free software: you can redistribute it and/or modify
+# gyrocube-src is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# aimbots-src is distributed in the hope that it will be useful,
+# gyrocube-src is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with aimbots-src.  If not, see <https://www.gnu.org/licenses/>.
+# along with gyrocube-src.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
 import sys
 
 SCRIPT_DIR = os.path.dirname(__file__)
-INPUT_FILE = os.path.join(SCRIPT_DIR, '../aimbots-src/size.txt')
+INPUT_FILE = os.path.join(SCRIPT_DIR, '../gyrocube-src/size.txt')
 OUTPUT_FILE = os.path.join(SCRIPT_DIR, '../metrics.txt')
 
 if len(sys.argv) != 2:

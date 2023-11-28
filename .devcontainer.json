@@ -9,6 +9,6 @@
     ],
     "mounts": [
         // Persist installed extensions across container rebuilds
-        "source=taproot-aimbots-src-extensions,target=/root/.vscode-server/extensions,type=volume",
+        "source=taproot-gyrocube-src-extensions,target=/root/.vscode-server/extensions,type=volume",
     ]
 }
