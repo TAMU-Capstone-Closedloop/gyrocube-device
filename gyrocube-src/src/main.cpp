@@ -126,26 +126,13 @@ static void initializeIo(src::Drivers *drivers) {
     drivers->errorController.init();
     drivers->kinematicInformant.initialize(SAMPLE_FREQUENCY, 0.1f, 0.0f);
 
-#ifndef TARGET_TURRET  // Chassis-exclusive initializations
     drivers->remote.initialize();
     drivers->refSerial.initialize();
     // drivers->magnetometer.init();
-    drivers->kinematicInformant.recalibrateIMU(
-        {CIMU_CALIBRATION_EULER_X, CIMU_CALIBRATION_EULER_Y, CIMU_CALIBRATION_EULER_Z});
-#else
-    drivers->kinematicInformant.recalibrateIMU(
-        {TIMU_CALIBRATION_EULER_X, TIMU_CALIBRATION_EULER_Y, TIMU_CALIBRATION_EULER_Z});
-#endif
+    drivers->kinematicInformant.recalibrateIMU();
 
     drivers->schedulerTerminalHandler.init();
     drivers->djiMotorTerminalSerialHandler.init();
-#ifdef ULTRASONIC
-    drivers->railDistanceSensor.initialize();
-#endif
-
-#ifdef TURRET_HAS_IMU  // should probably be initialized for both TARGET_TURRET and chassis boards
-    drivers->turretCommunicator.init();
-#endif
 }
 
 float yawDisplay, pitchDisplay, rollDisplay;

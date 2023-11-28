@@ -49,21 +49,21 @@ void RobotFrames::updateFrames(
 float camera_mounting_offset_angle = -0.0f;
 
 void RobotFrames::mirrorPastCameraFrame(float gimbalYawAngle, float gimbalPitchAngle, AngleUnit angleUnit) {
-#ifndef TARGET_TURRET
-    Matrix3f at_cv_update_gimbal_orientation_relative_to_chassis_orientation =
-        rotationMatrix(gimbalYawAngle, Z_AXIS, angleUnit) * rotationMatrix(gimbalPitchAngle, X_AXIS, angleUnit) *
-        rotationMatrix(camera_mounting_offset_angle, Z_AXIS, AngleUnit::Degrees);
+    // #ifndef TARGET_TURRET
+    //     Matrix3f at_cv_update_gimbal_orientation_relative_to_chassis_orientation =
+    //         rotationMatrix(gimbalYawAngle, Z_AXIS, angleUnit) * rotationMatrix(gimbalPitchAngle, X_AXIS, angleUnit) *
+    //         rotationMatrix(camera_mounting_offset_angle, Z_AXIS, AngleUnit::Degrees);
 
-    Vector3f at_cv_update_camera_origin_relative_to_chassis_origin =
-        TURRET_ORIGIN_RELATIVE_TO_CHASSIS_ORIGIN +
-        at_cv_update_gimbal_orientation_relative_to_chassis_orientation * CAMERA_ORIGIN_RELATIVE_TO_TURRET_ORIGIN;
+    //     Vector3f at_cv_update_camera_origin_relative_to_chassis_origin =
+    //         TURRET_ORIGIN_RELATIVE_TO_CHASSIS_ORIGIN +
+    //         at_cv_update_gimbal_orientation_relative_to_chassis_orientation * CAMERA_ORIGIN_RELATIVE_TO_TURRET_ORIGIN;
 
-    cameraAtCVUpdateFrame.setOrientation(at_cv_update_gimbal_orientation_relative_to_chassis_orientation);
-    cameraAtCVUpdateFrame.setOrigin(at_cv_update_camera_origin_relative_to_chassis_origin);
-#else
+    //     cameraAtCVUpdateFrame.setOrientation(at_cv_update_gimbal_orientation_relative_to_chassis_orientation);
+    //     cameraAtCVUpdateFrame.setOrigin(at_cv_update_camera_origin_relative_to_chassis_origin);
+    // #else
     UNUSED(gimbalYawAngle);
     UNUSED(gimbalPitchAngle);
     UNUSED(angleUnit);
-#endif
+    // #endif
 }
 }  // namespace src::Informants::Transformers
